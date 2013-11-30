@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsLearnSignalRPart1", "LetsLearnSignalRPart1\LetsLearnSignalRPart1.csproj", "{24B397C3-C76B-4C16-97DB-2959475CDBDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsLearnSignalRPart2", "LetsLearnSignalRPart2\LetsLearnSignalRPart2.csproj", "{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{24B397C3-C76B-4C16-97DB-2959475CDBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24B397C3-C76B-4C16-97DB-2959475CDBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24B397C3-C76B-4C16-97DB-2959475CDBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
