@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>High Frequeny Boxes</title>
+    <style>
+        .box {
+            width: 30px;
+            height: 30px;            
+        }
+    </style>
+</head>
+<body>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery-ui-1.10.3.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.0.0.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script>
+        $(function () {
+            var boxHub = $.connection.boxHub;
+            var $box = null;
+            var updateRate = 1000 / 10; //10 messages every second
+            var moved = false;
+            
+            boxHub.client.createBox = function (newBox) {
+                $('body').append('<div class="box" id="' + newBox.id + '"></div>');
+
+                $box = $('#' + newBox.id);
+                $box.css({ left: newBox.left, top: newBox.top, 'background-color': '#FF0000' });
+
+                moved = true;
+
+                $box.draggable({
+                    drag: function () {                        
+                        moved = true;                        
+                    }
+                });
+            };
+
+            boxHub.client.removeBox = function (connectionId) {
+                $('#' + connectionId).remove();
+            };
+
+            boxHub.client.updateBoxes = function (model) {                 
+                var updateBox = $('#' + model.id);
+
+                console.log(model.id);
+
+                    if (updateBox.length == 0) {
+                        $('body').append('<div class="box" id="' + model.id + '"/>');
+
+                        var anotherBox = $('#' + model.id);
+
+                        console.log("left " + model.left + " top " + model.top);
+
+                        anotherBox.css({ 'background-color': '#0000FF', position: "absolute" });
+                        anotherBox.animate({ left: model.left, top: model.top }, { duration: updateRate, queue: false });
+                    }
+                    else {
+                        updateBox.animate({ left: model.left, top: model.top }, { duration: updateRate, queue: false });
+                    }                    
+            };
+
+            $.connection.hub.start().done(function () {
+                setInterval(updateServer, updateRate);
+            });
+
+            function updateServer() {
+                if (moved) {
+                    boxModel = $box.offset();
+                    boxHub.server.updateBox(boxModel);
+                    moved = false;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsLearnSignalRPart1", "Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsLearnSignalRPart2", "LetsLearnSignalRPart2\LetsLearnSignalRPart2.csproj", "{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsLearnSignalRPart3", "LetsLearnSignalRPart3\LetsLearnSignalRPart3.csproj", "{38D534B0-3DE0-4A3F-93F9-198AC253647E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14053B28-4E14-4E99-B31E-DBFBF37BE3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38D534B0-3DE0-4A3F-93F9-198AC253647E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38D534B0-3DE0-4A3F-93F9-198AC253647E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38D534B0-3DE0-4A3F-93F9-198AC253647E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38D534B0-3DE0-4A3F-93F9-198AC253647E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
