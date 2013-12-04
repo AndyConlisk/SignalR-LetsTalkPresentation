@@ -43,14 +43,10 @@
             boxHub.client.updateBoxes = function (model) {                 
                 var updateBox = $('#' + model.id);
 
-                console.log(model.id);
-
                     if (updateBox.length == 0) {
                         $('body').append('<div class="box" id="' + model.id + '"/>');
 
                         var anotherBox = $('#' + model.id);
-
-                        console.log("left " + model.left + " top " + model.top);
 
                         anotherBox.css({ 'background-color': '#0000FF', position: "absolute", 'z-index': 1 });
                         anotherBox.animate({ left: model.left, top: model.top }, { duration: updateRate, queue: false });
